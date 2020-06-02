@@ -10,6 +10,33 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.switch {
+	position: relative;
+	display: inline	;
+	width: 60px;
+	height: 34px;
+  }
+  
+  .switch input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  input[name=twitter]:checked + div {
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 10px;
+	}
+ 
+  input[name=menu]:checked + nav {
+	display: block;
+	position: absolute;
+	top: -35px;
+	right: -35px;
+	}
+  
 
 .firstWrapper {
 	background-color: #f7f7f7;
@@ -24,58 +51,44 @@ html, body {
 	display: block;
 	float: right;
 	padding: 35px 35px 0 0;
+	position: relative;
 }
 
-.twitter:before {
-  font-family: FontAwesome;
-  content: "\f099";
-  font-size: 1.3em;
-  color: #aaa;
-  cursor: pointer;
-}
-
-.twitter:hover:before {
-	color: #666;
-	}
-	
-.twitter:after {
-  font-family: FontAwesome;
-  content: "\f078";
-  font-size: .7em;
-  padding: 0 10px;
-  color: #aaa;
-  cursor: pointer;
-}
-
-.twitter:hover:after {
-	color: #666;
+	.twitter:before {
+	font-family: FontAwesome;
+	content: "\f099";
+	font-size: 1.3em;
+	color: #aaa;
+	cursor: pointer;
 	}
 
-.socialsModal {
-	width: 80px;
-	height: 100px;
-	border-radius: 5px;
-	background-color: #fff;
-	float: right;
-	display: none;
-	margin: 4% -4% 0 0;
-	z-index: 2;
-}
+	.twitter:hover:before {
+		color: #666;
+		}
+		
+	.twitter:after {
+	font-family: FontAwesome;
+	content: "\f078";
+	font-size: .7em;
+	padding: 0 5px;
+	color: #aaa;
+	cursor: pointer;
+	}
 
-.hide {
-	width: 80px;
-	height: 100px;
-	border-radius: 5px;
-	background-color: #fff;
-	position: absolute;
-	top: 1.5%;
-	right: 7.5%;
-	display: block;
-	box-shadow: 0 1px 20px #ddd;
-	z-index: 1;
-	line-height: 2em;
-	padding: 10px;
-	
+	.twitter:hover:after {
+		color: #666;
+		}
+
+	.socialsModal {
+		width: 80px;
+		height: 100px;
+		border-radius: 5px;
+		background-color: #fff;
+		display: none;
+		box-shadow: 0 1px 20px #ddd;
+		z-index: 1;
+		line-height: 2em;
+		padding: 10px;
 	}
 
 .modalTwitter {
@@ -119,15 +132,11 @@ html, body {
 
 
 .contextMenu {
-	width: 15%;
+	width: 200px;
 	height: 800px;
 	border-left: 1px solid #aaa;
 	background-color: #fff;
 	display: none;
-	float: none;
-	z-index: 2;
-	position: fixed;
-	right: 0;
 }
 
 .closeTab:after {

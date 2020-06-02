@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 		<script src="https://kit.fontawesome.com/382b20def7.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 
  <body>
@@ -14,48 +13,50 @@
 	<article class="firstWrapper">
 	
 		<!-- navbar upper right -->
+
 		<div class="navBarSocials">
-			<span class="twitter"></span>
-			<span class="menu" onclick="document.getElementById('contextMenu').style.display='block'"></span>
+			<label class="switch">
+		 		<span class="twitter"></span>
+		 		<input type="checkbox" name="twitter">
+		 		<div class="socialsModal">
+					<p class="modalTwitter">Twitter</p>
+					<p class="modalReddit">Reddit</p>
+					<p class="modalBlog">Blog</p>
+				</div>  	
+			</label>
+			<label class="switch">
+				<span class="menu"></span>
+				<input type="checkbox" name="menu">
+				<nav id="contextMenu" class="contextMenu">
+				<span class="closeTab"></span>
+					<h5> SETTINGS </h5>
+					<p> Themes </p>
+					<p> Other Settings </p>
+					<p> !Bang Search Shortcuts </p>
+				
+					<h5> PRIVACY ESSENTIALS </h5>
+					<p> Private Search </p>
+					<p> App and Extension </p>
+				
+					<h5> WHY PRIVACY </h5>
+					<p> Privacy Blog </p>
+					<p> Privacy Crash Course </p>
+					<p> Help Spread Privacy </p>	
+				
+					<h5>WHO WE ARE</h5>
+					<p> About Us </p>
+					<p> Privacy Policy </p>
+					<p> Careers </p>	
+		 		    <p> Press Kit </p>	
+		
+		 			<h5>KEEP IN TOUCH</h5>
+		 			<p>Twitter </p>
+		 			<p> Store </p>
+		 			<p> Reddit </p>	
+		 		    <p> Help </p>	
+				</nav>
+			</label>		
 		</div>
-
-		<div class="socialsModal">
-			<p class="modalTwitter">Twitter</p>
-			<p class="modalReddit">Reddit</p>
-			<p class="modalBlog">Blog</p>
-		</div>
-	
-		<!-- fake context menu -->
-
-		<nav id="contextMenu" class="contextMenu">
-			<span class="closeTab" onclick="document.getElementById('contextMenu').style.display='none'"></span>	
-			<h5> SETTINGS </h5>
-			<p> Themes </p>
-			<p> Other Settings </p>
-			<p> !Bang Search Shortcuts </p>
-		
-			<h5> PRIVACY ESSENTIALS </h5>
-			<p> Private Search </p>
-			<p> App and Extension </p>
-		
-			<h5> WHY PRIVACY </h5>
-			<p> Privacy Blog </p>
-			<p> Privacy Crash Course </p>
-			<p> Help Spread Privacy </p>	
-		
-			<h5>WHO WE ARE</h5>
-			<p> About Us </p>
-			<p> Privacy Policy </p>
-			<p> Careers </p>	
- 		    <p> Press Kit </p>	
-
- 			<h5>KEEP IN TOUCH</h5>
- 			<p>Twitter </p>
- 			<p> Store </p>
- 			<p> Reddit </p>	
- 		    <p> Help </p>	
-		</nav>
-		
 	
 		<img src="images/logo_homepage_mobile.normal.v108.unoptimized.svg" 
 			class="mainLogo" id="mainlogo" alt="DuckDucGo logo.svg">
@@ -88,7 +89,7 @@
 			
 		<h2>How it Works</h2>
 
-		</article> <!-- closes Section 1 -->
+	</article> <!-- closes Section 1 -->
 
 	<!-- boxes between two backgrounds -->
 
@@ -169,28 +170,5 @@
 		<img src="images/4-alpinist-v2.svg" alt="alpinist.svg">
 			
 	</section> <!-- closes Section 5 -->
-
-	<script>
-	/* script to toogle display block / none from socials' menu */
-
-	$(document).ready(function(){
-	$(".twitter").click(function(){
-		$(".socialsModal").toggleClass("hide");
-	});
-	});
-	</script>
 </body>
-</html>
-	</div> <!-- closes Section 5 -->
-
-<script>
-/* script to toogle display block / none from socials' menu */
-
-$(document).ready(function(){
-  $(".twitter").click(function(){
-    $(".socialsModal").toggleClass("hide");
-  });
-});
-</script>
- </body>
 </html>
